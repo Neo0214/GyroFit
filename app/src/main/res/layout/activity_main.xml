@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/hello"
+
+    <Button
+        android:id="@+id/button"
+        android:background="@color/color_basic_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello, Gyrofit"
+        android:text="@string/main_get_in_btn"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

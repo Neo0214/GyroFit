@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Gyrofit</string>
+    <string name="main_get_in_btn">立即体验</string>
 </resources>
