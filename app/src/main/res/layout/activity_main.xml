@@ -30,11 +30,11 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/all_title"
+            android:paddingStart="24sp"
             android:text="@string/main_name"
             android:textColor="@color/white"
-            android:textSize="48sp"
-            android:fontFamily="@font/all_title"
-            android:paddingStart="24sp"/>
+            android:textSize="48sp" />
     </LinearLayout>
 
     <LinearLayout
