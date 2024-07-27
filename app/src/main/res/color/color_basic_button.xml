@@ -14,4 +14,5 @@
 
     <!-- Default state (normal state) -->
     <item android:color="@color/button_normal" />
+
 </selector>
