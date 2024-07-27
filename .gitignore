@@ -15,3 +15,4 @@
 local.properties
 .idea
 *.docx
+/tmp-res

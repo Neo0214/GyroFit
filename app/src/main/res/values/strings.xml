@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Gyrofit</string>
+
+    <string name="main_get_in_btn">立即体验</string>
+    <string name="main_title">耳边的\n轻量级健身教练</string>
+    <string name="main_name">GyroFit</string>
+
+    <string name="pic_description_main_bg">主界面图</string>
+    <string name="title_activity_page_index">PageIndex</string>
+
+    <string name="page_index_title1">课程概览</string>
+    <string name="page_index_title2">最近历史</string>
+    <string name="page_index_title3">状态统计</string>
 </resources>
