@@ -11,4 +11,8 @@
     <string name="page_index_title1">课程概览</string>
     <string name="page_index_title2">最近历史</string>
     <string name="page_index_title3">状态统计</string>
+
+    <string name="menu_index">首页</string>
+    <string name="menu_train">训练</string>
+    <string name="menu_history">历史</string>
 </resources>
