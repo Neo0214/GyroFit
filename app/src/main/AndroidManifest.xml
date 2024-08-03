@@ -29,7 +29,13 @@
         </activity>
         <activity
             android:name=".activity.PageIndexActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
+        <activity
+            android:name=".activity.PageTrainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.PageHistoryActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

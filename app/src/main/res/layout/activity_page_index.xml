@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="259dp"
             android:layout_weight="3"
             android:orientation="vertical">
 
@@ -22,12 +22,31 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/page_index_title1" />
+                android:fontFamily="@font/font_main_title"
+                android:paddingLeft="20sp"
+                android:text="@string/page_index_title1"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="219dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/img" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="275dp"
             android:layout_weight="3"
             android:orientation="vertical">
 
@@ -35,12 +54,15 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/page_index_title2" />
+                android:fontFamily="@font/font_main_title"
+                android:paddingLeft="20sp"
+                android:text="@string/page_index_title2"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="223dp"
             android:layout_weight="3"
             android:orientation="vertical">
 
@@ -48,13 +70,22 @@
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/page_index_title3" />
+                android:fontFamily="@font/font_main_title"
+                android:paddingLeft="20sp"
+                android:text="@string/page_index_title3"
+                android:textSize="20sp" />
         </LinearLayout>
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="60sp"
+            android:layout_weight="0"
+            android:background="#42808080"
+            android:clickable="true"
+            android:paddingTop="1sp"
+            android:paddingBottom="3sp"
+            app:elevation="0dp"
             app:menu="@menu/bottom_menu" />
 
     </LinearLayout>
