@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:fontFamily="@font/font_main_title"
+                android:paddingLeft="20sp"
+                android:paddingTop="5sp"
+                android:text="@string/page_train_title"
+                android:textSize="20sp" />
+
+            <VideoView
+                android:id="@+id/videoView4"
+                android:layout_width="match_parent"
+                android:layout_height="218dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+                android:paddingTop="10sp"
+                android:text="@string/page_train_text"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100sp"
+                android:layout_marginTop="50sp"
+                android:layout_marginRight="100sp"
+                android:backgroundTint="#2196F3"
+                android:fontFamily="@font/font_main_title"
+                android:text="@string/page_train_test"
+                android:textColor="#FFFFFF" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginBottom="0sp"
+            android:layout_weight="0"
+            android:background="#42808080"
+            android:clickable="true"
+            android:paddingTop="1sp"
+            android:paddingBottom="3sp"
+            app:elevation="0dp"
+            app:menu="@menu/bottom_menu" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

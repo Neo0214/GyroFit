@@ -20,11 +20,12 @@ public class PageIndexActivity extends AppCompatActivity {
 
     private void initEventHandlers() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.menu_index);
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.menu_index) {
+            if (item.getItemId() == R.id.menu_train) {
                 Intent intent = new Intent(PageIndexActivity.this, PageTrainActivity.class);
                 startActivity(intent);
-            } else {
+            } else if(item.getItemId() == R.id.menu_history) {
                 Intent intent2 = new Intent(PageIndexActivity.this, PageHistoryActivity.class);
                 startActivity(intent2);
             }
