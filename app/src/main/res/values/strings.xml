@@ -12,6 +12,13 @@
     <string name="page_index_title2">最近历史</string>
     <string name="page_index_title3">状态统计</string>
 
+    <string name="page_train_title">标准动作</string>
+    <string name="page_train_text">深蹲（英语：Squat），又称蹲举，在力量练习中，是个复合的、全身性的练习动作，它可以训练到大腿、臀部、大腿后肌，同时可以增强骨头、韧带和横贯下半身的肌腱。深蹲被认为是增长腿部和臀部力量和围度，以及发展核心力量（core strength）必不可少的练习。在等长收缩中，在以正确的方式深蹲时，下背部、上背部、腹部、躯干肌肉、肋间肌肉，以及肩部和手臂对于这个练习都是必不可少的。 深蹲在力量举（健力）中是一种竞争性的上举。</string>
+    <string name="page_train_test">动作检测</string>
+
+    <string name="page_history_title">历史记录</string>
+    <string name="page_history_sample">动作：下蹲\n评分：80分</string>
+
     <string name="menu_index">首页</string>
     <string name="menu_train">训练</string>
     <string name="menu_history">历史</string>
