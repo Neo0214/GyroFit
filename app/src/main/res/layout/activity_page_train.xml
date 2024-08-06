@@ -8,17 +8,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="780dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
+                android:layout_height="54dp"
                 android:fontFamily="@font/font_main_title"
                 android:paddingLeft="20sp"
                 android:paddingTop="5sp"
@@ -28,12 +30,12 @@
             <VideoView
                 android:id="@+id/videoView4"
                 android:layout_width="match_parent"
-                android:layout_height="218dp" />
+                android:layout_height="294dp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
-                android:layout_height="179dp"
+                android:layout_height="213dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="10sp"
                 android:layout_marginEnd="10sp"
@@ -56,14 +58,14 @@
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
-                android:layout_height="48dp" />
+                android:layout_height="148dp" />
 
         </LinearLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="60sp"
+            android:layout_height="64dp"
             android:layout_marginBottom="0sp"
             android:layout_weight="0"
             android:background="#42808080"
