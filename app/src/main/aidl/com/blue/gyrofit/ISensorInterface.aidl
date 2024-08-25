@@ -1,5 +1,5 @@
 // ISensorInterface.aidl
-package com.blue.gyrofit.service;
+package com.blue.gyrofit;
 
 // Declare any non-default types here with import statements
 
