@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blue.gyrofit.R;
+import com.blue.gyrofit.SensorService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PageIndexActivity extends AppCompatActivity {
@@ -16,6 +17,8 @@ public class PageIndexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_page_index);
 
         initEventHandlers();
+
+
     }
 
     private void initEventHandlers() {

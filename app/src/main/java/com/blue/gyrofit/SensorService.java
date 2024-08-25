@@ -16,9 +16,10 @@ public class SensorService extends Service {
     }
     public void oncreate(){
         super.onCreate();
+        Log.v(TAG,"onCreate()");
     }
-    public void onStart(Intent intent, int startId)
-    {
+    @Override
+    public void onStart(Intent intent, int startId){
         Log.v(TAG,"onStart()");
     }
 

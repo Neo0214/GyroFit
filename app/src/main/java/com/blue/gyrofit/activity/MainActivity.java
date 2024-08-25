@@ -1,6 +1,7 @@
 package com.blue.gyrofit.activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initEventHandlers();
+        Log.e("test"," assert");
     }
 
     private void initEventHandlers(){

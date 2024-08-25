@@ -2,11 +2,13 @@ package com.blue.gyrofit.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.IBinder;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blue.gyrofit.R;
+import com.blue.gyrofit.SensorService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PageTrainActivity extends AppCompatActivity {
@@ -16,6 +18,9 @@ public class PageTrainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_page_train);
 
         initEventHandlers();
+        Intent intent=new Intent(this, SensorService.class);
+        startService(intent);
+
     }
 
     private void initEventHandlers() {
