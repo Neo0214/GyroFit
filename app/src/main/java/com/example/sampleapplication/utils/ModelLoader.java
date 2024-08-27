@@ -1,4 +1,4 @@
-package com.blue.gyrofit.utils;
+package com.example.sampleapplication.utils;
 
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;

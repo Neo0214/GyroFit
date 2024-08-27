@@ -18,25 +18,25 @@
         <service
             android:name=".SensorService"
             android:enabled="true"
-            android:exported="false">
-
-        </service>
+            android:exported="true"></service>
 
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.PageIndexActivity"
             android:exported="true" />
         <activity
             android:name=".activity.PageTrainActivity"
-            android:exported="true" />
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".activity.PageHistoryActivity"
             android:exported="true" />

@@ -1,4 +1,4 @@
-package com.blue.gyrofit.activity;
+package com.example.sampleapplication.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.blue.gyrofit.R;
+import com.example.sampleapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.InputStream;

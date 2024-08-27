@@ -1,4 +1,4 @@
-package com.blue.gyrofit;
+package com.example.sampleapplication;
 
 import android.app.Service;
 import android.content.Intent;
@@ -28,7 +28,7 @@ public class SensorService extends Service {
 
         @Override
         public void setStringData(String strData) throws RemoteException {
-            Log.v(TAG,"1111receive:"+strData);
+            Log.v(TAG,"11receive:"+strData);
             mStrData = strData;
             // 广播更新事件
             Log.v("myblue","send broadcast");

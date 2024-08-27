@@ -1,4 +1,4 @@
-package com.blue.gyrofit.utils;
+package com.example.sampleapplication.utils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.blue.gyrofit'
+    namespace 'com.example.sampleapplication'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.blue.gyrofit"
+        applicationId "com.example.sampleapplication"
         minSdk 31
         targetSdk 34
         versionCode 1

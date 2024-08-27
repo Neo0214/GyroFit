@@ -1,4 +1,4 @@
-package com.blue.gyrofit.activity;
+package com.example.sampleapplication.activity;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -18,30 +18,30 @@ import android.widget.VideoView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.blue.gyrofit.ISensorInterface;
-import com.blue.gyrofit.R;
-import com.blue.gyrofit.SensorService;
-import com.blue.gyrofit.utils.ModelLoader;
-import com.blue.gyrofit.utils.SqautDataHandler;
+import com.example.sampleapplication.ISensorInterface;
+import com.example.sampleapplication.R;
+import com.example.sampleapplication.SensorService;
+import com.example.sampleapplication.utils.ModelLoader;
+import com.example.sampleapplication.utils.SqautDataHandler;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.tensorflow.lite.Interpreter;
 
 public class PageTrainActivity extends AppCompatActivity {
     // members
-    private ISensorInterface earSensor;
-    private ServiceConnection earConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName className, IBinder service) {
-            earSensor = ISensorInterface.Stub.asInterface(service);
-
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName arg0) {
-            earSensor = null;
-        }
-    };
+//    private ISensorInterface earSensor;
+//    private ServiceConnection earConnection = new ServiceConnection() {
+//        @Override
+//        public void onServiceConnected(ComponentName className, IBinder service) {
+//            earSensor = ISensorInterface.Stub.asInterface(service);
+//
+//        }
+//
+//        @Override
+//        public void onServiceDisconnected(ComponentName arg0) {
+//            earSensor = null;
+//        }
+//    };
 
     private Interpreter squatsModel;
     private SqautDataHandler sqautDataHandler;
@@ -65,8 +65,8 @@ public class PageTrainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_page_train);
         initEventHandlers();
         // 绑定数据
-        Intent intent = new Intent(this, SensorService.class);
-        bindService(intent, earConnection, BIND_AUTO_CREATE);
+        //Intent intent = new Intent(this, SensorService.class);
+        //bindService(intent, earConnection, BIND_AUTO_CREATE);
 
         // 加载模型
         ModelLoader md = new ModelLoader("sq.tflite", this);
@@ -107,10 +107,10 @@ public class PageTrainActivity extends AppCompatActivity {
             Toast.makeText(this, "模型未加载", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (earSensor == null){
-            Toast.makeText(this, "传感器未连接", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        if (earSensor == null){
+//            Toast.makeText(this, "传感器未连接", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
         if (sqautDataHandler == null){
             Toast.makeText(this, "数据处理器未初始化", Toast.LENGTH_SHORT).show();
             return;
@@ -122,11 +122,11 @@ public class PageTrainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        unbindService(earConnection);
-    }
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        unbindService(earConnection);
+//    }
 
 
 }
