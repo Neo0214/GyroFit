@@ -7,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blue.gyrofit.R;
-import com.blue.gyrofit.SensorService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PageIndexActivity extends AppCompatActivity {

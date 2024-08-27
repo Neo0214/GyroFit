@@ -31,6 +31,10 @@ android {
         compose true
         aidl true
     }
+
+    aaptOptions {
+        noCompress "tflite"
+    }
 }
 
 dependencies {
@@ -44,4 +48,6 @@ dependencies {
     implementation libs.retrofit.gson
     implementation libs.okhttp
     implementation libs.okhttp.logging
+
+    implementation libs.tensorflow.lite
 }

@@ -6,20 +6,17 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 
-
-
 public class SensorService extends Service {
-    private String TAG = "SensorService";
+    private String TAG = "MySensor";
     private String mStrData;
-    private boolean mSetSergviceRunning = true;
+    private boolean mSetServiceRunning = true;
     public SensorService() {
     }
     public void oncreate(){
         super.onCreate();
-        Log.v(TAG,"onCreate()");
     }
-    @Override
-    public void onStart(Intent intent, int startId){
+    public void onStart(Intent intent, int startId)
+    {
         Log.v(TAG,"onStart()");
     }
 
@@ -31,8 +28,18 @@ public class SensorService extends Service {
 
         @Override
         public void setStringData(String strData) throws RemoteException {
-            Log.v(TAG,"receive:"+strData);
+            Log.v(TAG,"1111receive:"+strData);
             mStrData = strData;
+            // 广播更新事件
+            Log.v("myblue","send broadcast");
+            Intent intent = new Intent("com.blue.gyrofit.DATA_UPDATED");
+            intent.putExtra("data",strData);
+            sendBroadcast(intent);
+        }
+
+        @Override
+        public String getStringData() throws RemoteException {
+            return mStrData;
         }
     };
     @Override
