@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.blue.gyrofit'
+    namespace 'com.example.sampleapplication'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.blue.gyrofit"
+        applicationId "com.example.sampleapplication"
         minSdk 31
         targetSdk 34
         versionCode 1
@@ -26,8 +26,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    buildFeatures{
-        //aldi true
+    // enable aidl
+    buildFeatures {
+        compose true
+        aidl true
+    }
+
+    aaptOptions {
+        noCompress "tflite"
     }
 }
 
@@ -42,4 +48,8 @@ dependencies {
     implementation libs.retrofit.gson
     implementation libs.okhttp
     implementation libs.okhttp.logging
+
+    implementation libs.tensorflow.lite
+    implementation(libs.mpandroidchart)
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
 }

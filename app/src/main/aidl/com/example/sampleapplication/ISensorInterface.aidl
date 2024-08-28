@@ -1,5 +1,5 @@
 // ISensorInterface.aidl
-package com.blue.gyrofit.service;
+package com.example.sampleapplication;
 
 // Declare any non-default types here with import statements
 
@@ -11,4 +11,5 @@ interface ISensorInterface {
     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
             double aDouble, String aString);
     void setStringData(String strData);
+    String getStringData();
 }

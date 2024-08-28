@@ -1,4 +1,4 @@
-package com.blue.gyrofit.activity;
+package com.example.sampleapplication.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.blue.gyrofit.R;
+import com.example.sampleapplication.R;
 
 public class MainActivity extends AppCompatActivity {
     @Override

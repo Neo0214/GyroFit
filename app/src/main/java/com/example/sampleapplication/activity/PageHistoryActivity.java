@@ -1,4 +1,4 @@
-package com.blue.gyrofit.activity;
+package com.example.sampleapplication.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.blue.gyrofit.R;
+import com.example.sampleapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.InputStream;
@@ -60,7 +60,7 @@ public class PageHistoryActivity extends AppCompatActivity {
 
     public interface UserInfoService {
         @GET("user/getInfo")
-        Call<UserInfo> getUserInfo(@Query("userId") String userId);
+        Call<UserInfo> getUserInfo(@Query("id") String userId);
     }
 
 
@@ -141,6 +141,7 @@ public class PageHistoryActivity extends AppCompatActivity {
                     UserInfo userInfo = response.body();
                     String userInfoText = "ID： " + userInfo.getId() + "\n用户名： " + userInfo.getName();
                     userInfoTextView.setText(userInfoText);
+                    Log.e("PageHistoryActivity", "User info: " + userInfoText);
                 } else {
                     Log.e("PageHistoryActivity", "Failed to get user info");
                 }
