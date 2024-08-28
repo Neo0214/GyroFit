@@ -31,9 +31,10 @@ public class SensorService extends Service {
             Log.v(TAG,"11receive:"+strData);
             mStrData = strData;
             // 广播更新事件
-            Log.v("myblue","send broadcast");
-            Intent intent = new Intent("com.blue.gyrofit.DATA_UPDATED");
-            intent.putExtra("data",strData);
+            //Log.v("myblue","send broadcast");
+            // 本地广播
+            Intent intent = new Intent("com.example.sampleapplication.DATA_UPDATE");
+            intent.putExtra("data", strData);
             sendBroadcast(intent);
         }
 

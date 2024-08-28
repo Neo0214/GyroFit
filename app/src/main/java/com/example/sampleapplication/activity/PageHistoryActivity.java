@@ -139,7 +139,7 @@ public class PageHistoryActivity extends AppCompatActivity {
             public void onResponse(@NonNull Call<UserInfo> call, @NonNull Response<UserInfo> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     UserInfo userInfo = response.body();
-                    String userInfoText = "ID： " + userInfo.getId() + "\n用户名： " + userInfo.getName();
+                    String userInfoText = "ID： " + "BTester" + "\n用户名： " + userInfo.getName();
                     userInfoTextView.setText(userInfoText);
                     Log.e("PageHistoryActivity", "User info: " + userInfoText);
                 } else {

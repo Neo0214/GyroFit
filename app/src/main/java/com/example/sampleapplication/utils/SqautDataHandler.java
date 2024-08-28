@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SqautDataHandler {
     private List<Float> data;
-    private final int windowSize=45;
+    private final int windowSize=43;
     private final int oneSize=6;
 
     public SqautDataHandler() {
@@ -25,10 +25,18 @@ public class SqautDataHandler {
         }
     }
     private List<Float> parseData(String str){
-        return null;
+        String[] strArray=str.split(",");
+        List<Float> res=new ArrayList<>();
+        for (int i=1;i<oneSize+1;i++){
+            res.add(Float.parseFloat(strArray[i]));
+        }
+        return res;
     }
 
     public boolean isEnough(){
         return data.size()==windowSize*oneSize;
+    }
+    public List<Float> getInputData(){
+        return data;
     }
 }
