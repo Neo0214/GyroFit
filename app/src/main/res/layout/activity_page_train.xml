@@ -26,11 +26,18 @@
                 android:paddingTop="5sp"
                 android:text="@string/page_train_title"
                 android:textSize="20sp" />
-
-            <VideoView
-                android:id="@+id/videoView4"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="294dp" />
+                android:layout_height="294dp"
+                >
+                <VideoView
+                    android:id="@+id/videoView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="294dp"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
 
             <TextView
                 android:id="@+id/textView8"

@@ -25,8 +25,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.sampleapplication.ISensorInterface;
 import com.example.sampleapplication.R;
 import com.example.sampleapplication.SensorService;
+import com.example.sampleapplication.utils.HintPlayer;
 import com.example.sampleapplication.utils.ModelLoader;
 import com.example.sampleapplication.utils.SqautDataHandler;
+import com.example.sampleapplication.utils.SqautHandler;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -55,7 +57,8 @@ public class PageTrainActivity extends AppCompatActivity {
     private SqautDataHandler sqautDataHandler;
 
     private BroadcastReceiver mReceiver;
-
+    private HintPlayer hintPlayer;
+    private SqautHandler sqautHandler;
     // methods
 
     @Override
@@ -72,6 +75,8 @@ public class PageTrainActivity extends AppCompatActivity {
         squatsModel = md.loadModel();
         // 加载其他处理器
         sqautDataHandler = new SqautDataHandler();
+        hintPlayer = new HintPlayer(this);
+        sqautHandler = new SqautHandler(squatsModel,hintPlayer);
         // 注册广播
         mReceiver = new BroadcastReceiver() {
             @Override
@@ -87,9 +92,8 @@ public class PageTrainActivity extends AppCompatActivity {
         IntentFilter filter = new IntentFilter("com.example.sampleapplication.DATA_UPDATE");
         registerReceiver(mReceiver, filter, Context.RECEIVER_EXPORTED);
 
-        //
-        startMp();
-
+        // 播放提示音
+        hintPlayer.begin();
     }
 
     private void initEventHandlers() {
@@ -136,6 +140,8 @@ public class PageTrainActivity extends AppCompatActivity {
         VideoView videoView = findViewById(R.id.videoView4);
         videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test));
         videoView.start();
+
+
     }
 
     private void runModel(){
@@ -144,18 +150,12 @@ public class PageTrainActivity extends AppCompatActivity {
         for (int i=0;i<258;i++){
             input[i]=sqautDataHandler.getInputData().get(i);
         }
-        squatsModel.run(input,output);
-        if (output[0][0]>0.05){
-            Log.v("outputblue", "output:"+output[0][0]);
-            Toast.makeText(this, "完成一次", Toast.LENGTH_SHORT).show();
-        }
+        sqautHandler.run(input,output);
+
+
 
     }
 
-    private void startMp(){
-        String modelName = "pose.task";
-
-    }
 
 
 
@@ -165,6 +165,7 @@ public class PageTrainActivity extends AppCompatActivity {
         super.onDestroy();
         unbindService(earConnection);
         unregisterReceiver(mReceiver);
+        hintPlayer.release();
     }
 
 
